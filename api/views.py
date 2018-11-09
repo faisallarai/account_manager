@@ -13,3 +13,12 @@ class UserViewSet(UserMixin,viewsets.ModelViewSet):
     
 class PatientViewSet(PatientMixin,viewsets.ModelViewSet):
    pass
+
+
+class ElasticViewSet(viewsets.ViewSet):
+    def list(self, request):
+        item_list = get_items(request)
+        return Response(data=item_list)
+
+
+class AuthApi(viewsets.Rea)

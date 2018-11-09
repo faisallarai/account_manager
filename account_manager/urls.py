@@ -4,7 +4,7 @@ from django.urls import include, path
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
-    path('account/', include('api.urls'))
+    path('accounts/', include('api.urls'))
 ]
 
 
